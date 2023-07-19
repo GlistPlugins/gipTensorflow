@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 3.10.2)
 
 ##### PLUGIN NAME #####
-set(pluginname gipTensorFlow)
+set(pluginname gipTensorflow)
 
 
 ##### PLUGIN PATHS #####
@@ -10,17 +10,21 @@ set(PLUGIN_LIBS_DIR ${PLUGIN_DIR}/libs)
 
 
 ##### PLUGIN SOURCES #####
-list(APPEND PLUGIN_SRCS
-			${PLUGIN_DIR}/src/gipTensorFlow.cpp
+
+file(GLOB_RECURSE SOURCES 
+				"${PLUGIN_DIR}/src/*.cpp"
+				"${PLUGIN_DIR}/libs/src/tensorflow/*.cpp"
 )
+list(APPEND PLUGIN_SRCS ${SOURCES})
 
 
 ##### PLUGIN HEADERS #####
 list(APPEND PLUGIN_INCLUDES
 			${PLUGIN_DIR}/src
 			${PLUGIN_LIBS_DIR}/include
+			${PLUGIN_LIBS_DIR}/src/tensorflow/c
+			${PLUGIN_LIBS_DIR}/src/tensorflow/cc
 )
-
 
 ##### PLUGIN DEPENDENCY LOCATIONS (IF ANY) #####
 if(WIN32)
