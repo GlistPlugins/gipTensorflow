@@ -13,7 +13,8 @@ set(PLUGIN_LIBS_DIR ${PLUGIN_DIR}/libs)
 
 file(GLOB_RECURSE SOURCES 
 				"${PLUGIN_DIR}/src/*.cpp"
-				"${PLUGIN_DIR}/libs/src/tensorflow/*.cpp"
+				"${PLUGIN_DIR}/libs/src/tensorflow/c/*.c"
+				"${PLUGIN_DIR}/libs/src/tensorflow/cc/*.cc"
 )
 list(APPEND PLUGIN_SRCS ${SOURCES})
 
@@ -22,8 +23,7 @@ list(APPEND PLUGIN_SRCS ${SOURCES})
 list(APPEND PLUGIN_INCLUDES
 			${PLUGIN_DIR}/src
 			${PLUGIN_LIBS_DIR}/include
-			${PLUGIN_LIBS_DIR}/src/tensorflow/c
-			${PLUGIN_LIBS_DIR}/src/tensorflow/cc
+			${PLUGIN_LIBS_DIR}/src
 )
 
 ##### PLUGIN DEPENDENCY LOCATIONS (IF ANY) #####
