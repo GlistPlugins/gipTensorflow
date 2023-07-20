@@ -15,6 +15,8 @@ file(GLOB_RECURSE SOURCES
 				"${PLUGIN_DIR}/src/*.cpp"
 				"${PLUGIN_DIR}/libs/src/tensorflow/c/*.c"
 				"${PLUGIN_DIR}/libs/src/tensorflow/cc/*.cc"
+				"${PLUGIN_DIR}/libs/src/tensorflow/tsl/*.c"
+				"${PLUGIN_DIR}/libs/src/tensorflow/tsl/*.cc"
 )
 list(APPEND PLUGIN_SRCS ${SOURCES})
 
