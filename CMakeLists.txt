@@ -20,6 +20,9 @@ file(GLOB_RECURSE SOURCES
 				"${PLUGIN_DIR}/libs/src/tensorflow/core/*.c"
 				"${PLUGIN_DIR}/libs/src/tensorflow/core/*.cc"
 				"${PLUGIN_DIR}/libs/src/tensorflow/core/*.py"
+				"${PLUGIN_DIR}/libs/src/absl/*.c"
+				"${PLUGIN_DIR}/libs/src/absl/*.cc"
+				"${PLUGIN_DIR}/libs/src/absl/*.py"
 )
 list(APPEND PLUGIN_SRCS ${SOURCES})
 
@@ -29,6 +32,7 @@ list(APPEND PLUGIN_INCLUDES
 			${PLUGIN_DIR}/src
 			${PLUGIN_LIBS_DIR}/include
 			${PLUGIN_LIBS_DIR}/src
+			${PLUGIN_LIBS_DIR}/src/absl
 )
 
 ##### PLUGIN DEPENDENCY LOCATIONS (IF ANY) #####
