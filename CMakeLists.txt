@@ -39,6 +39,7 @@ list(APPEND PLUGIN_INCLUDES
             ${PLUGIN_DIR}/src
             ${PLUGIN_LIBS_DIR}/include
             ${PLUGIN_LIBS_DIR}/src
+            ${PLUGIN_LIBS_DIR}/src/tensorflow
             ${PLUGIN_LIBS_DIR}/src/third_party
             ${PLUGIN_LIBS_DIR}/src/third_party/googlemock/include
             ${PLUGIN_LIBS_DIR}/src/third_party/googletest/include
