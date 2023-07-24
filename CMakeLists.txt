@@ -19,8 +19,8 @@ file(GLOB_RECURSE SOURCES
 				"${PLUGIN_DIR}/libs/src/tensorflow/cc/*.cc"
 				"${PLUGIN_DIR}/libs/src/tensorflow/core/*.c"
 				"${PLUGIN_DIR}/libs/src/tensorflow/core/*.cc"
-				"${PLUGIN_DIR}/libs/src/third_party/tsl/*.c"
-				"${PLUGIN_DIR}/libs/src/third_party/tsl/*.cc"
+				"${PLUGIN_DIR}/libs/src/tensorflow/tsl/*.c"
+				"${PLUGIN_DIR}/libs/src/tensorflow/tsl/*.cc"
 				"${PLUGIN_DIR}/libs/src/third_party/absl/*.c"
 				"${PLUGIN_DIR}/libs/src/third_party/absl/*.cc"
 				"${PLUGIN_DIR}/libs/src/third_party/googlemock/*.c"
@@ -36,14 +36,12 @@ list(APPEND PLUGIN_SRCS ${SOURCES})
 
 ##### PLUGIN HEADERS #####
 list(APPEND PLUGIN_INCLUDES
-			${PLUGIN_DIR}/src
-			${PLUGIN_LIBS_DIR}/include
-			${PLUGIN_LIBS_DIR}/src
-			${PLUGIN_LIBS_DIR}/src/third_party/tsl
-			${PLUGIN_LIBS_DIR}/src/third_party/absl
-			${PLUGIN_LIBS_DIR}/src/third_party/googlemock/include
-			${PLUGIN_LIBS_DIR}/src/third_party/googletest/include
-			${PLUGIN_LIBS_DIR}/src/third_party/benchmark
+            ${PLUGIN_DIR}/src
+            ${PLUGIN_LIBS_DIR}/include
+            ${PLUGIN_LIBS_DIR}/src
+            ${PLUGIN_LIBS_DIR}/src/third_party
+            ${PLUGIN_LIBS_DIR}/src/third_party/googlemock/include
+            ${PLUGIN_LIBS_DIR}/src/third_party/googletest/include
 )
 
 ##### PLUGIN DEPENDENCY LOCATIONS (IF ANY) #####
