@@ -29,6 +29,9 @@ file(GLOB_RECURSE SOURCES
 				"${PLUGIN_DIR}/libs/src/googletest/*.c"
 				"${PLUGIN_DIR}/libs/src/googletest/*.cc"
 				"${PLUGIN_DIR}/libs/src/googletest/*.py"
+				"${PLUGIN_DIR}/libs/src/benchmark/*.c"
+				"${PLUGIN_DIR}/libs/src/benchmark/*.cc"
+				"${PLUGIN_DIR}/libs/src/benchmark/*.java"
 				
 )
 list(APPEND PLUGIN_SRCS ${SOURCES})
@@ -40,8 +43,9 @@ list(APPEND PLUGIN_INCLUDES
 			${PLUGIN_LIBS_DIR}/include
 			${PLUGIN_LIBS_DIR}/src
 			${PLUGIN_LIBS_DIR}/src/absl
-			${PLUGIN_LIBS_DIR}/src/googlemock
-			${PLUGIN_LIBS_DIR}/src/googletest
+			${PLUGIN_LIBS_DIR}/src/googlemock/include
+			${PLUGIN_LIBS_DIR}/src/googletest/include
+			${PLUGIN_LIBS_DIR}/src/benchmark
 )
 
 ##### PLUGIN DEPENDENCY LOCATIONS (IF ANY) #####
