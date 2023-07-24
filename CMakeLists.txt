@@ -14,21 +14,28 @@ set(PLUGIN_LIBS_DIR ${PLUGIN_DIR}/libs)
 file(GLOB_RECURSE SOURCES 
 				"${PLUGIN_DIR}/src/*.cpp"
 				"${PLUGIN_DIR}/libs/src/tensorflow/c/*.c"
+				"${PLUGIN_DIR}/libs/src/tensorflow/c/*.cc"
+				"${PLUGIN_DIR}/libs/src/tensorflow/c/*.py"
+				"${PLUGIN_DIR}/libs/src/tensorflow/cc/*.c"
 				"${PLUGIN_DIR}/libs/src/tensorflow/cc/*.cc"
-				"${PLUGIN_DIR}/libs/src/tensorflow/tsl/*.c"
-				"${PLUGIN_DIR}/libs/src/tensorflow/tsl/*.cc"
+				"${PLUGIN_DIR}/libs/src/tensorflow/cc/*.py"
 				"${PLUGIN_DIR}/libs/src/tensorflow/core/*.c"
 				"${PLUGIN_DIR}/libs/src/tensorflow/core/*.cc"
 				"${PLUGIN_DIR}/libs/src/tensorflow/core/*.py"
-				"${PLUGIN_DIR}/libs/src/absl/*.c"
-				"${PLUGIN_DIR}/libs/src/absl/*.cc"
-				"${PLUGIN_DIR}/libs/src/absl/*.py"
-				"${PLUGIN_DIR}/libs/src/googlemock/*.c"
-				"${PLUGIN_DIR}/libs/src/googlemock/*.cc"
-				"${PLUGIN_DIR}/libs/src/googlemock/*.py"
-				"${PLUGIN_DIR}/libs/src/googletest/*.c"
-				"${PLUGIN_DIR}/libs/src/googletest/*.cc"
-				"${PLUGIN_DIR}/libs/src/googletest/*.py"
+				"${PLUGIN_DIR}/libs/src/third_party/tsl/*.c"
+				"${PLUGIN_DIR}/libs/src/third_party/tsl/*.cc"
+				"${PLUGIN_DIR}/libs/src/third_party/absl/*.c"
+				"${PLUGIN_DIR}/libs/src/third_party/absl/*.cc"
+				"${PLUGIN_DIR}/libs/src/third_party/absl/*.py"
+				"${PLUGIN_DIR}/libs/src/third_party/googlemock/*.c"
+				"${PLUGIN_DIR}/libs/src/third_party/googlemock/*.cc"
+				"${PLUGIN_DIR}/libs/src/third_party/googlemock/*.py"
+				"${PLUGIN_DIR}/libs/src/third_party/googletest/*.c"
+				"${PLUGIN_DIR}/libs/src/third_party/googletest/*.cc"
+				"${PLUGIN_DIR}/libs/src/third_party/googletest/*.py"
+				"${PLUGIN_DIR}/libs/src/third_party/benchmark/*.c"
+				"${PLUGIN_DIR}/libs/src/third_party/benchmark/*.cc"
+				"${PLUGIN_DIR}/libs/src/third_party/benchmark/*.java"
 				
 )
 list(APPEND PLUGIN_SRCS ${SOURCES})
@@ -39,9 +46,11 @@ list(APPEND PLUGIN_INCLUDES
 			${PLUGIN_DIR}/src
 			${PLUGIN_LIBS_DIR}/include
 			${PLUGIN_LIBS_DIR}/src
-			${PLUGIN_LIBS_DIR}/src/absl
-			${PLUGIN_LIBS_DIR}/src/googlemock
-			${PLUGIN_LIBS_DIR}/src/googletest
+			${PLUGIN_LIBS_DIR}/src/third_party/tsl
+			${PLUGIN_LIBS_DIR}/src/third_party/absl
+			${PLUGIN_LIBS_DIR}/src/third_party/googlemock/include
+			${PLUGIN_LIBS_DIR}/src/third_party/googletest/include
+			${PLUGIN_LIBS_DIR}/src/third_party/benchmark
 )
 
 ##### PLUGIN DEPENDENCY LOCATIONS (IF ANY) #####
