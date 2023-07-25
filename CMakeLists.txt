@@ -28,8 +28,7 @@ file(GLOB_RECURSE SOURCES
 				"${PLUGIN_DIR}/libs/src/third_party/googletest/*.c"
 				"${PLUGIN_DIR}/libs/src/third_party/googletest/*.cc"
 				"${PLUGIN_DIR}/libs/src/third_party/benchmark/*.c"
-				"${PLUGIN_DIR}/libs/src/third_party/benchmark/*.cc"
-				"${PLUGIN_DIR}/libs/src/third_party/eigen/*.cpp"							
+				"${PLUGIN_DIR}/libs/src/third_party/benchmark/*.cc"							
 )
 
 list(APPEND PLUGIN_SRCS ${SOURCES})
