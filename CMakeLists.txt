@@ -28,13 +28,9 @@ file(GLOB_RECURSE SOURCES
 				"${PLUGIN_DIR}/libs/src/third_party/googletest/*.c"
 				"${PLUGIN_DIR}/libs/src/third_party/googletest/*.cc"
 				"${PLUGIN_DIR}/libs/src/third_party/benchmark/*.c"
-				"${PLUGIN_DIR}/libs/src/third_party/benchmark/*.cc"
-				"${PLUGIN_DIR}/libs/src/third_party/eigen/*.c"
-				"${PLUGIN_DIR}/libs/src/third_party/eigen/*.cc"
-				"${PLUGIN_DIR}/libs/src/third_party/eigen/*.cpp"			
-				
-				
+				"${PLUGIN_DIR}/libs/src/third_party/benchmark/*.cc"							
 )
+
 list(APPEND PLUGIN_SRCS ${SOURCES})
 
 
@@ -45,6 +41,7 @@ list(APPEND PLUGIN_INCLUDES
             ${PLUGIN_LIBS_DIR}/src
             ${PLUGIN_LIBS_DIR}/src/tensorflow
             ${PLUGIN_LIBS_DIR}/src/third_party
+            ${PLUGIN_LIBS_DIR}/src/third_party/eigen
             ${PLUGIN_LIBS_DIR}/src/third_party/googlemock/include
             ${PLUGIN_LIBS_DIR}/src/third_party/googletest/include
 )
